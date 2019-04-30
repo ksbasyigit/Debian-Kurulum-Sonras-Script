@@ -1,12 +1,12 @@
-# Debian 9 Güncelleme
+# Debian 9 GÃ¼ncelleme
 apt update
 apt upgrade
-apt install net-tools
+apt install net-tools -y
 
 # Cockpit Kurulumu
 echo 'deb http://deb.debian.org/debian stretch-backports main' > /etc/apt/sources.list.d/backports.list
 apt update
-apt install cockpit
+apt install cockpit -y
 systemctl start cockpit
 systemctl enable cockpit
 # systemctl status cockpit
@@ -17,13 +17,13 @@ echo 'deb http://webmin.mirror.somersettechsolutions.co.uk/repository sarge cont
 wget http://www.webmin.com/jcameron-key.asc
 apt-key add jcameron-key.asc
 apt update
-apt install webmin
+apt install webmin -y
 systemctl start webmin
 systemctl enable webmin
 # systemctl status webmin
 
 # Vmware Open Tool Kurulumu
-apt install open-vm-tools neofetch
+apt install open-vm-tools neofetch -y
 # echo 'neofetch' > ./bashrc
 
 # Veeam Backup Kurulumu
@@ -31,7 +31,7 @@ wget http://http://repository.veeam.com/backup/linux/agent/dpkg/debian/x86_64/po
 # wget https://www.veeam.com/download_add_packs/backup-agent-linux/deb-64
 # wget https://www.veeam.com/download_add_packs/backup-agent-linux/recovery-64
 dpkg -i ./veeam-release* && apt-get update
-apt install veeam cifs-utils
+apt install veeam cifs-utils -y
 
 # IPv6 Disable
 sysctl -w net.ipv6.conf.all.disable_ipv6=1
