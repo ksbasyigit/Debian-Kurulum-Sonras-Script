@@ -27,10 +27,10 @@ apt install open-vm-tools neofetch -y
 # echo 'neofetch' > ./bashrc
 
 # Veeam Backup Kurulumu
-wget http://http://repository.veeam.com/backup/linux/agent/dpkg/debian/x86_64/pool/veeam/v/veeam-release-deb//veeam-release-deb_1.0.7_amd64.deb
+wget http://repository.veeam.com/backup/linux/agent/dpkg/debian/x86_64/pool/veeam/v/veeam-release-deb/veeam-release-deb_1.0.7_amd64.deb
 # wget https://www.veeam.com/download_add_packs/backup-agent-linux/deb-64
 # wget https://www.veeam.com/download_add_packs/backup-agent-linux/recovery-64
-dpkg -i ./veeam-release* && apt-get update
+dpkg -i ./veeam-release* && apt update
 apt install veeam cifs-utils -y
 
 # IPv6 Disable
